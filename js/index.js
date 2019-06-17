@@ -87,3 +87,14 @@ mainP[2].textContent = siteContent['main-content']['services-content'];
 mainP[3].textContent = siteContent['main-content']['product-content'];
 mainP[4].textContent = siteContent['main-content']['vision-content'];
 
+/* ~~~~~~~~~~~~~~~~ CONTACT ~~~~~~~~~~~~~~~~ */
+
+let contactH4 =document.querySelector('.contact h4');
+contactH4.textContent = siteContent['contact']['contact-h4'];
+
+let contactP = document.querySelectorAll('.contact p');
+contactP[0].textContent = siteContent['contact']['address'];
+contactP[0].style.whiteSpace = 'pre-line';
+contactP[1].textContent = siteContent['contact']['phone'];
+contactP[2].textContent = siteContent['contact']['email'];
+
