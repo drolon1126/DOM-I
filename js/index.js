@@ -62,6 +62,18 @@ navA[3].textContent = siteContent['nav']['nav-item-4'];
 navA[4].textContent = siteContent['nav']['nav-item-5'];
 navA[5].textContent = siteContent['nav']['nav-item-6'];
 
+let appendedElement = document.createElement('a');
+appendedElement.textContent='Appended';
+appendedElement.href= '#';
+appendedElement.style.color=['green'];
+let prependedElement = document.createElement('a');
+prependedElement.textContent='Prepended';
+prependedElement.href= '#';
+prependedElement.style.color=['green'];
+
+nav.appendChild(appendedElement);
+nav.prepend(prependedElement);
+
 /* ~~~~~~~~~~~~~~~~ CTA ~~~~~~~~~~~~~~~~ */
 
 let ctaH1 = document.querySelector('.cta-text h1');
