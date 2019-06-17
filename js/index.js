@@ -61,3 +61,12 @@ navA[2].textContent = siteContent['nav']['nav-item-3'];
 navA[3].textContent = siteContent['nav']['nav-item-4'];
 navA[4].textContent = siteContent['nav']['nav-item-5'];
 navA[5].textContent = siteContent['nav']['nav-item-6'];
+
+/* ~~~~~~~~~~~~~~~~ CTA ~~~~~~~~~~~~~~~~ */
+
+let ctaH1 = document.querySelector('.cta-text h1');
+ctaH1.style.whiteSpace = 'pre-line';
+ctaH1.textContent = siteContent['cta']['h1'];
+
+let ctaBttn = document.querySelector('.cta-text button');
+ctaBttn.textContent = siteContent['cta']['button'];
