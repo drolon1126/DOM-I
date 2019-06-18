@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM \n Is \n Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -38,5 +38,80 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+
+/* ~~~~~~~~~~~~~~~~ IMG ~~~~~~~~~~~~~~~~ */
+
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+let midImg = document.getElementById("middle-img");
+midImg.setAttribute('src', siteContent["main-content"]["img-src"])
+
+/* ~~~~~~~~~~~~~~~~ NAV ~~~~~~~~~~~~~~~~ */
+
+let nav = document.querySelector('nav');
+let navA = document.querySelectorAll('nav a');
+navA.forEach(a=>a.style.color='green');
+navA[0].textContent = siteContent['nav']['nav-item-1'];
+navA[1].textContent = siteContent['nav']['nav-item-2'];
+navA[2].textContent = siteContent['nav']['nav-item-3'];
+navA[3].textContent = siteContent['nav']['nav-item-4'];
+navA[4].textContent = siteContent['nav']['nav-item-5'];
+navA[5].textContent = siteContent['nav']['nav-item-6'];
+
+let appendedElement = document.createElement('a');
+appendedElement.textContent='Appended';
+appendedElement.href= '#';
+appendedElement.style.color=['green'];
+let prependedElement = document.createElement('a');
+prependedElement.textContent='Prepended';
+prependedElement.href= '#';
+prependedElement.style.color=['green'];
+
+nav.appendChild(appendedElement);
+nav.prepend(prependedElement);
+
+/* ~~~~~~~~~~~~~~~~ CTA ~~~~~~~~~~~~~~~~ */
+
+let ctaH1 = document.querySelector('.cta-text h1');
+ctaH1.style.whiteSpace = 'pre-line';
+ctaH1.textContent = siteContent['cta']['h1'];
+
+let ctaBttn = document.querySelector('.cta-text button');
+ctaBttn.textContent = siteContent['cta']['button'];
+
+/* ~~~~~~~~~~~~~~~~ MAIN ~~~~~~~~~~~~~~~~ */
+
+let mainH4 = document.querySelectorAll('.text-content h4');
+mainH4[0].textContent = siteContent['main-content']['features-h4'];
+mainH4[1].textContent = siteContent['main-content']['about-h4'];
+mainH4[2].textContent = siteContent['main-content']['services-h4'];
+mainH4[3].textContent = siteContent['main-content']['product-h4'];
+mainH4[4].textContent = siteContent['main-content']['vision-h4'];
+
+let mainP = document.querySelectorAll('.text-content p');
+mainP[0].textContent = siteContent['main-content']['features-content'];
+mainP[1].textContent = siteContent['main-content']['about-content'];
+mainP[2].textContent = siteContent['main-content']['services-content'];
+mainP[3].textContent = siteContent['main-content']['product-content'];
+mainP[4].textContent = siteContent['main-content']['vision-content'];
+
+/* ~~~~~~~~~~~~~~~~ CONTACT ~~~~~~~~~~~~~~~~ */
+
+let contactH4 =document.querySelector('.contact h4');
+contactH4.textContent = siteContent['contact']['contact-h4'];
+
+let contactP = document.querySelectorAll('.contact p');
+contactP[0].textContent = siteContent['contact']['address'];
+contactP[0].style.whiteSpace = 'pre-line';
+contactP[1].textContent = siteContent['contact']['phone'];
+contactP[2].textContent = siteContent['contact']['email'];
+
+/* ~~~~~~~~~~~~~~~~ FOOTER ~~~~~~~~~~~~~~~~ */
+
+let footer = document.querySelector('footer p');
+footer.textContent = siteContent['footer']['copyright'];
+
